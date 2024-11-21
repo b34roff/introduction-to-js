@@ -2,7 +2,7 @@
 const form = document.querySelector("form");
 
 // Function pour stocker les "todos" dans le localStorage
-function storeList() {
+function storeTodos() {
   window.localStorage.todoList = list.innerHTML;
 }
 
@@ -26,7 +26,7 @@ form.addEventListener("submit", (e) => {
   //  On affiche le contenu de l'input dans la liste, on vide l'input, et on stock la donnée dans le localStorage
   list.innerHTML += `<li>${item.value}</li>`;
   item.value = "";
-  storeList();
+  storeTodos();
 });
 
 // On écoute les clics sur la liste
@@ -41,5 +41,5 @@ list.addEventListener("click", (e) => {
   }
 
   // On stock la donnée dans le localStorage
-  storeList();
+  storeTodos();
 });
